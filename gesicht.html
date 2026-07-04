@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Gesicht – steffimartin.pur</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,500;0,600;0,900;1,300;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f5f0e8;--ink:#1e1a14;--terra:#c4704a;--terra-dk:#b0613d;--sage:#6b9e6f;--gold:#c8a84b;--plum:#7c5c8a;--dust:#e8dfd0;--muted:#9a8e82;--card:#fffdf9;--bg2:#f5f0e8;--accent:var(--terra);--soft:#fdf0ea}
+*{margin:0;padding:0;box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);background-image:radial-gradient(circle at 12% 0%,rgba(196,112,74,0.05),transparent 45%);color:var(--ink);font-family:'DM Sans',sans-serif;font-weight:300;line-height:1.6;min-height:100dvh;padding:18px 16px calc(40px + env(safe-area-inset-bottom))}
+.wrap{max-width:560px;margin:0 auto}
+.topbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px}
+.back{display:inline-flex;align-items:center;gap:7px;text-decoration:none;color:var(--ink);font-size:13px;font-weight:500;background:var(--card);padding:9px 16px 9px 13px;border-radius:22px;box-shadow:0 2px 10px rgba(30,26,20,0.05);transition:transform .18s ease,gap .18s ease;-webkit-tap-highlight-color:transparent}
+.back:hover{transform:translateX(-3px);gap:10px}
+.back:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.mark{font-size:11px;letter-spacing:.5px;color:var(--muted);opacity:.7}.mark b{color:var(--terra);font-weight:500}
+.head{background:var(--ink);color:var(--bg);border-radius:24px;padding:30px 26px;position:relative;overflow:hidden;margin-bottom:18px}
+.head::after{content:'';position:absolute;top:-80px;right:-80px;width:240px;height:240px;border-radius:50%;background:var(--accent);opacity:.14}
+.head .glyph{font-size:34px;position:relative;z-index:1;margin-bottom:14px}
+.head .eyebrow{position:relative;z-index:1;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--accent);font-weight:500;margin-bottom:10px}
+.head h1{position:relative;z-index:1;font-family:'Fraunces',serif;font-weight:900;font-size:clamp(28px,8vw,40px);line-height:1.05;color:#f5f0e8;margin-bottom:12px}
+.head .note{position:relative;z-index:1;font-size:13.5px;color:rgba(245,240,232,0.62);max-width:400px;line-height:1.65;font-style:italic}
+.pcard{background:var(--card);border-radius:18px;padding:20px;box-shadow:0 2px 12px rgba(30,26,20,0.05);margin-bottom:14px}
+.pcard.tmpl{background:transparent;border:1px dashed var(--muted);box-shadow:none}
+.pcard-top{display:flex;align-items:center;gap:8px;margin-bottom:10px}
+.pcard h4{font-family:'Fraunces',serif;font-size:18px;font-weight:600}
+.pill{font-size:10px;padding:3px 11px;border-radius:20px;font-weight:500;margin-left:auto;background:var(--soft);color:var(--accent)}
+.pcard .what{font-size:12.5px;color:var(--muted);margin-bottom:12px;line-height:1.6}
+.pcard .mine{font-size:13.5px;line-height:1.7;background:var(--bg);border-left:3px solid var(--accent);border-radius:10px;padding:11px 14px;margin-bottom:12px;font-style:italic}
+.pcard-link{font-size:12.5px;font-weight:500;color:var(--accent);text-decoration:none;display:inline-flex;gap:5px;transition:gap .18s}
+.pcard-link:hover{gap:9px}
+.tmpl-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.tmpl ul{list-style:none;font-size:12.5px;color:var(--muted);line-height:1.85}.tmpl ul li::before{content:'· '}
+.foot{text-align:center;margin-top:26px}
+.foot .backbig{display:inline-flex;align-items:center;gap:7px;text-decoration:none;color:#fff;background:var(--accent);font-size:13px;font-weight:500;padding:13px 24px;border-radius:26px;transition:opacity .2s}
+.foot .backbig:hover{opacity:.9}
+.foot .pur{font-size:12px;letter-spacing:1px;color:var(--muted);opacity:.7;margin-top:22px}.foot .pur b{color:var(--terra)}
+.foot .disc{font-size:10px;color:var(--muted);opacity:.65;max-width:430px;margin:12px auto 0;line-height:1.6}
+@media (prefers-reduced-motion:no-preference){.wrap>*{opacity:0;transform:translateY(12px);animation:rise .45s ease forwards}.head{animation-delay:.05s}.pcard{animation-delay:.12s}.pcard:nth-of-type(2){animation-delay:.18s}.tmpl{animation-delay:.24s}.foot{animation-delay:.3s}@keyframes rise{to{opacity:1;transform:translateY(0)}}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="topbar">
+    <a class="back" href="index.html">← Board</a>
+    <span class="mark">🌿 steffimartin<b>.pur</b></span>
+  </div>
+
+  <div class="head">
+    <div class="glyph">🌿</div>
+    <p class="eyebrow">Gesicht</p>
+    <h1>Morgens & abends</h1>
+    <p class="note">Meine Morgen- und Abendroutine – schnell, weil zwei Kinder selten warten.</p>
+  </div>
+
+  <div class="pcard">
+    <div class="pcard-top"><h4>Fresh Skin Perfection</h4><span class="pill">Morgens</span></div>
+    <p class="what">Ringanas hochwertige Spezialpflege fürs Gesicht – mit seidiger Textur.</p>
+    <div class="mine">Mein Geheimtipp für Tage, an denen man mir die kurze Nacht ansieht. Zieht ein, fühlt sich an wie Seide – und danach sieht die Haut aus wie durch'n sanften Filter.</div>
+    <a href="https://stefanie-martin.ringana.com/produkt/fresh-skin-perfection/" class="pcard-link" target="_blank" rel="noopener">Hier findest du's →</a>
+  </div>
+
+  <div class="pcard">
+    <div class="pcard-top"><h4>Fresh Tinted Moisturiser</h4><span class="pill">Morgens</span></div>
+    <p class="what">Eine leicht getönte Tagespflege mit dezenter Deckung – Pflege und ein Hauch Farbe in einem. Gibt's auch in einer Variante mit LSF 30.</p>
+    <div class="mine">Mein „sieht aus wie nichts, macht aber den Unterschied"-Produkt. Wie meine eigene Haut an einem richtig guten Tag – ebenmäßiger Teint, kein Maskeneffekt, null Aufwand.</div>
+    <a href="https://stefanie-martin.ringana.com/produkt/fresh-tinted-moisturiser/" class="pcard-link" target="_blank" rel="noopener">Hier findest du's →</a>
+  </div>
+
+  <div class="pcard">
+    <div class="pcard-top"><h4>Fresh Skin Care Set</h4><span class="pill">Abends</span></div>
+    <p class="what">Meine vierteilige Gesichtspflege – Reinigung, Tonic, Serum und Creme. Gibt's in verschiedenen Varianten, je nachdem was die Haut gerade braucht.</p>
+    <div class="mine">Abends mein kleines Ritual: einmal alles, Schritt für Schritt. Welche Variante grad dran ist, wechsel ich nach Lust und Haut – aber die vier Schritte bleiben. Tut nach so einem Tag einfach gut.</div>
+    <a href="https://stefanie-martin.ringana.com" class="pcard-link" target="_blank" rel="noopener">Hier findest du's →</a>
+  </div>
+
+  <div class="foot">
+    <a class="backbig" href="index.html">← Zurück zum Board</a>
+    <p class="pur">🌿 steffimartin<b>.pur</b></p>
+    <p class="disc">Persönliche Erfahrungen, keine Heilversprechen. Produkte ersetzen keine ärztliche Beratung. Links können Empfehlungs-/Partnerlinks sein.</p>
+  </div>
+</div>
+</body>
+</html>
