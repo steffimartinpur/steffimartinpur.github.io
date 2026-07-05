@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Mitmachen – steffimartin.pur</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,500;0,600;0,900;1,300;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f5f0e8;--ink:#1e1a14;--terra:#c4704a;--terra-dk:#b0613d;--sage:#6b9e6f;--gold:#c8a84b;--plum:#7c5c8a;--dust:#e8dfd0;--muted:#9a8e82;--card:#fffdf9;--bg2:#f5f0e8;--accent:var(--plum);--soft:#f1ecf4}
+*{margin:0;padding:0;box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);background-image:radial-gradient(circle at 12% 0%,rgba(124,92,138,0.06),transparent 45%);color:var(--ink);font-family:'DM Sans',sans-serif;font-weight:300;line-height:1.6;min-height:100dvh;padding:18px 16px calc(40px + env(safe-area-inset-bottom))}
+.wrap{max-width:560px;margin:0 auto}
+.topbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px}
+.back{display:inline-flex;align-items:center;gap:7px;text-decoration:none;color:var(--ink);font-size:13px;font-weight:500;background:var(--card);padding:9px 16px 9px 13px;border-radius:22px;box-shadow:0 2px 10px rgba(30,26,20,0.05);transition:transform .18s ease,gap .18s ease;-webkit-tap-highlight-color:transparent}
+.back:hover{transform:translateX(-3px);gap:10px}
+.back:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.mark{font-size:11px;letter-spacing:.5px;color:var(--muted);opacity:.7}.mark b{color:var(--terra);font-weight:500}
+.head{background:var(--ink);color:var(--bg);border-radius:24px;padding:30px 26px;position:relative;overflow:hidden;margin-bottom:18px}
+.head::after{content:'';position:absolute;top:-80px;right:-80px;width:240px;height:240px;border-radius:50%;background:var(--accent);opacity:.16}
+.head .glyph{font-size:34px;position:relative;z-index:1;margin-bottom:14px}
+.head .eyebrow{position:relative;z-index:1;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--accent);font-weight:500;margin-bottom:10px}
+.head h1{position:relative;z-index:1;font-family:'Fraunces',serif;font-weight:900;font-size:clamp(28px,8vw,40px);line-height:1.05;color:#f5f0e8;margin-bottom:12px}
+.head .note{position:relative;z-index:1;font-size:13.5px;color:rgba(245,240,232,0.62);max-width:400px;line-height:1.65;font-style:italic}
+.pcard{background:var(--card);border-radius:18px;padding:20px;box-shadow:0 2px 12px rgba(30,26,20,0.05);margin-bottom:14px}
+.pcard h4{font-family:'Fraunces',serif;font-size:18px;font-weight:600;margin-bottom:12px}
+.pcard .body{font-size:13.5px;line-height:1.7;color:var(--ink)}
+.pcard .body+.body{margin-top:10px}
+.pcard .mine{font-size:13.5px;line-height:1.7;background:var(--bg);border-left:3px solid var(--accent);border-radius:10px;padding:11px 14px;margin-top:14px;font-style:italic}
+.split{display:grid;gap:12px;margin-bottom:14px}
+@media(min-width:440px){.split{grid-template-columns:1fr 1fr}}
+.mini{background:var(--card);border-radius:16px;padding:18px 18px 16px;box-shadow:0 2px 12px rgba(30,26,20,0.05)}
+.mini.yes{border-top:3px solid var(--sage)}
+.mini.no{border-top:3px solid var(--dust)}
+.mini h5{font-family:'Fraunces',serif;font-size:14.5px;font-weight:600;margin-bottom:11px}
+.mini ul{list-style:none;font-size:12.8px;line-height:1.5}
+.mini ul li{position:relative;padding-left:20px;margin-bottom:9px;color:var(--ink)}
+.mini.yes ul li::before{content:'✓';position:absolute;left:0;top:0;color:var(--sage);font-weight:600}
+.mini.no ul li::before{content:'–';position:absolute;left:2px;top:0;color:var(--muted)}
+.fit h4{margin-bottom:14px}
+.fit .grp{margin-bottom:14px}
+.fit .grp:last-of-type{margin-bottom:0}
+.fit .grp-label{font-size:12.5px;font-weight:500;margin-bottom:9px;display:flex;align-items:center;gap:7px}
+.fit .grp.yes .grp-label{color:var(--sage)}
+.fit .grp.no .grp-label{color:var(--muted)}
+.fit ul{list-style:none;font-size:13px;line-height:1.5}
+.fit ul li{position:relative;padding-left:18px;margin-bottom:8px}
+.fit .grp.yes ul li::before{content:'🌿';position:absolute;left:0;top:1px;font-size:10px}
+.fit .grp.no ul li::before{content:'🚫';position:absolute;left:0;top:1px;font-size:10px}
+.fit .clarity{font-size:12.5px;color:var(--muted);font-style:italic;margin-top:14px;padding-top:13px;border-top:1px solid var(--dust)}
+.cta{background:var(--ink);border-radius:20px;padding:26px 24px;text-align:center;margin-bottom:14px;position:relative;overflow:hidden}
+.cta::after{content:'';position:absolute;bottom:-70px;left:-60px;width:200px;height:200px;border-radius:50%;background:var(--accent);opacity:.14}
+.cta p{position:relative;z-index:1;font-size:14px;color:rgba(245,240,232,0.82);line-height:1.6;margin-bottom:18px;font-style:italic}
+.cta .btn{position:relative;z-index:1;display:inline-flex;align-items:center;gap:8px;text-decoration:none;color:#fff;background:var(--accent);font-size:14px;font-weight:500;padding:14px 26px;border-radius:26px;transition:opacity .2s,transform .18s;-webkit-tap-highlight-color:transparent}
+.cta .btn:hover{opacity:.92;transform:translateY(-1px)}
+.cta .btn:focus-visible{outline:3px solid #fff;outline-offset:2px}
+.cta .alt{position:relative;z-index:1;display:block;margin-top:14px;font-size:12px;color:rgba(245,240,232,0.6)}
+.cta .alt a{color:rgba(245,240,232,0.85);text-decoration:underline;text-underline-offset:2px}
+.foot{text-align:center;margin-top:26px}
+.foot .backbig{display:inline-flex;align-items:center;gap:7px;text-decoration:none;color:#fff;background:var(--accent);font-size:13px;font-weight:500;padding:13px 24px;border-radius:26px;transition:opacity .2s}
+.foot .backbig:hover{opacity:.9}
+.foot .pur{font-size:12px;letter-spacing:1px;color:var(--muted);opacity:.7;margin-top:22px}.foot .pur b{color:var(--terra)}
+.foot .disc{font-size:10px;color:var(--muted);opacity:.65;max-width:430px;margin:12px auto 0;line-height:1.6}
+@media (prefers-reduced-motion:no-preference){.wrap>*{opacity:0;transform:translateY(12px);animation:rise .45s ease forwards}.head{animation-delay:.05s}.pcard{animation-delay:.12s}.split{animation-delay:.18s}.fit{animation-delay:.24s}.cta{animation-delay:.3s}.foot{animation-delay:.36s}@keyframes rise{to{opacity:1;transform:translateY(0)}}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="topbar">
+    <a class="back" href="index.html">← Board</a>
+    <span class="mark">🌿 steffimartin<b>.pur</b></span>
+  </div>
+
+  <div class="head">
+    <div class="glyph">🌱</div>
+    <p class="eyebrow">Mitmachen</p>
+    <h1>Was Eigenes aufbauen?</h1>
+    <p class="note">Kein Pitch, kein Druck. Nur ehrlich, wie das bei mir aussieht – neben Verwaltungsjob, Kids und Alltagschaos.</p>
+  </div>
+
+  <div class="pcard">
+    <h4>Warum ich das überhaupt mache</h4>
+    <p class="body">Ich hab 2024 Nein gesagt und 2025 Ja – und bereue eigentlich nur das Jahr dazwischen. Sicher ist eben nicht dasselbe wie erfüllt. Irgendwann wollte ich was, das sich nach mir anfühlt. Nicht statt dem Verwaltungsjob, sondern daneben.</p>
+    <div class="mine">Du musst nichts kündigen. Du musst niemandem was beweisen. Du darfst einfach erstmal neugierig sein.</div>
+  </div>
+
+  <div class="split">
+    <div class="mini yes">
+      <h5>Was es ist</h5>
+      <ul>
+        <li>ein ehrliches Empfehlungs­business mit Ringana</li>
+        <li>alltagstauglich, neben Familie &amp; Behördenjob</li>
+        <li>wächst in deinem Tempo</li>
+        <li>getragen von echtem Austausch</li>
+      </ul>
+    </div>
+    <div class="mini no">
+      <h5>Was es nicht ist</h5>
+      <ul>
+        <li>kein Schnell-reich-Ding</li>
+        <li>kein Hustle, kein „höher, schneller, weiter"</li>
+        <li>kein Verkaufsdruck</li>
+        <li>kein Entweder-oder: Sicherheit <i>oder</i> Freiheit</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="pcard fit">
+    <h4>Passt das zu dir?</h4>
+    <div class="grp yes">
+      <p class="grp-label">Könnte passen, wenn du…</p>
+      <ul>
+        <li>neugierig auf was Eigenes bist</li>
+        <li>lieber ehrlich empfiehlst als verkaufst</li>
+        <li>dir Schritt für Schritt was aufbauen willst</li>
+        <li>die Produkte magst, die du eh schon nutzt</li>
+      </ul>
+    </div>
+    <div class="grp no">
+      <p class="grp-label">Passt eher nicht, wenn du…</p>
+      <ul>
+        <li>schnelles Geld ohne Einsatz erwartest</li>
+        <li>nur kurz was „mitnehmen" willst</li>
+        <li>keine Lust auf echten Kontakt hast</li>
+      </ul>
+    </div>
+    <p class="clarity">Diese Klarheit nimmt uns beiden den Druck – dir das Gefühl, dich entscheiden zu müssen, und mir das Überreden.</p>
+  </div>
+
+  <div class="pcard">
+    <h4>Was du von mir hast</h4>
+    <p class="body">Ich bin keine Chefin und keine Coachin von oben herab – ich bin einfach eine, die den Weg selbst geht, mit allen Fragen und Umwegen. Ich begleite dich ehrlich und ohne Druck: mit Erfahrung, Klarheit und Raum für dein Tempo.</p>
+    <p class="body">Beweisen musst du mir gar nichts. Du darfst einfach du sein – mit allem, was gerade da ist.</p>
+  </div>
+
+  <div class="cta">
+    <p>Neugierig, wie das konkret aussieht? Schreib mir – ganz unverbindlich, ich erzähl dir davon.</p>
+    <a class="btn" href="https://wa.me/message/XXNH22SGTMEPM1" target="_blank" rel="noopener">💬 Schreib mir bei WhatsApp</a>
+    <span class="alt">Lieber leiser? <a href="https://instagram.com/steffimartin.pur" target="_blank" rel="noopener">Schreib mir eine Insta-DM</a></span>
+  </div>
+
+  <div class="foot">
+    <a class="backbig" href="index.html">← Zurück zum Board</a>
+    <p class="pur">🌿 steffimartin<b>.pur</b></p>
+    <p class="disc">Persönliche Erfahrungen, kein Einkommensversprechen. Ringana ist ein Empfehlungsgeschäft – was dabei rauskommt, hängt von dir ab. Links können Empfehlungs-/Partnerlinks sein.</p>
+  </div>
+</div>
+</body>
+</html>
