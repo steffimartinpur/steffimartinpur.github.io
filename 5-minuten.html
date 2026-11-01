@@ -8,57 +8,57 @@
 body{background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.6;padding:16px 16px 48px}
 main{max-width:600px;margin:0 auto}
 .werbung{font-size:12px;letter-spacing:.6px;text-transform:uppercase;color:var(--muted);text-align:right;margin-bottom:10px}
-.kopf{text-align:center;padding:26px 8px 22px}
-.mark{font-size:13px;color:var(--muted);margin-bottom:10px}
-h1{font-size:34px;line-height:1.15;margin-bottom:8px}
-.unter{font-size:17px;color:var(--terra-dk);font-weight:600}
-.card{background:var(--card);border-radius:22px;padding:24px 22px;box-shadow:0 3px 16px rgba(30,26,20,.07);margin-bottom:18px}
-h2{font-size:21px;line-height:1.3;margin-bottom:12px}
+.kopf{position:relative;border-radius:22px;overflow:hidden;margin-bottom:18px;box-shadow:0 3px 16px rgba(30,26,20,.1)}
+.kopf img{display:block;width:100%;height:340px;object-fit:cover;object-position:50% 30%}
+.kopf>div{position:absolute;left:0;right:0;bottom:0;padding:70px 20px 20px;background:linear-gradient(transparent,rgba(30,26,20,.72));color:#fff;text-align:center}
+.mark{font-size:13px;opacity:.92;margin-bottom:4px}
+h1{font-size:33px;line-height:1.15;margin-bottom:6px}
+.unter{font-size:16px;font-weight:600;color:#F5DDD0}
+.card{background:var(--card);border-radius:22px;padding:22px;box-shadow:0 3px 16px rgba(30,26,20,.07);margin-bottom:14px}
+h2{font-size:21px;line-height:1.3;margin-bottom:10px}
 p{font-size:16px;color:#3a332b;margin-bottom:12px}
 p:last-child{margin-bottom:0}
 .sogehts{background:var(--pfirsich)}
 .sogehts ol{margin:4px 0 0 20px}
 .sogehts li{font-size:15.5px;margin-bottom:6px;color:#3a332b}
-.uebersicht{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:4px 0 22px}
-.uebersicht a{display:inline-block;min-width:44px;padding:9px 12px;border-radius:999px;background:var(--card);color:var(--terra-dk);font-weight:700;font-size:14px;text-decoration:none;box-shadow:0 2px 8px rgba(30,26,20,.06)}
-.tag{scroll-margin-top:12px}
-.tagnr{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.5px;color:#fff;background:var(--salbei-dk);border-radius:999px;padding:3px 12px;margin-bottom:10px}
+.zwischen{font-size:13px;font-weight:700;letter-spacing:.6px;color:var(--terra-dk);margin:22px 4px 10px}
+details{background:var(--card);border-radius:18px;box-shadow:0 3px 14px rgba(30,26,20,.07);margin-bottom:10px;overflow:hidden;scroll-margin-top:10px}
+summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:14px;padding:12px 16px 12px 12px;min-height:60px}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"";flex:0 0 10px;height:10px;margin-left:auto;border-right:2.5px solid var(--terra-dk);border-bottom:2.5px solid var(--terra-dk);transform:rotate(45deg) translate(-2px,-2px);transition:transform .15s}
+details[open] summary:after{transform:rotate(-135deg) translate(-2px,-2px)}
+summary:focus-visible{outline:3px solid var(--terra);outline-offset:-3px;border-radius:18px}
+.mini{flex:0 0 60px;width:60px;height:60px;border-radius:12px;object-fit:cover}
+.tagnr{display:block;font-size:12px;font-weight:700;letter-spacing:.5px;color:var(--salbei-dk)}
+.titel{display:block;font-size:17px;font-weight:600;line-height:1.3}
+.text{padding:2px 18px 20px}
+.bild{display:block;width:100%;height:210px;object-fit:cover;border-radius:14px;margin-bottom:14px}
 .aufgabe{border-left:5px solid var(--terra);background:#FBF4EC;border-radius:0 14px 14px 0;padding:12px 14px;margin:14px 0}
 .aufgabe b{display:block;font-size:13px;letter-spacing:.5px;color:var(--terra-dk);margin-bottom:4px}
 .aufgabe p{margin:0}
 .vonmir{font-style:italic}
 .vonmir b{font-style:normal;color:var(--salbei-dk)}
-.audio{display:flex;align-items:center;gap:12px;border:2px dashed #e3d6c7;border-radius:14px;padding:12px 14px;margin-top:14px;color:var(--muted);font-size:14.5px}
-.audio i{flex:0 0 36px;height:36px;border-radius:50%;background:var(--salbei);position:relative}
-.audio i:after{content:"";position:absolute;left:14px;top:11px;border-left:11px solid #fff;border-top:7px solid transparent;border-bottom:7px solid transparent}
-audio{width:100%;margin-top:14px}
+audio{display:block;width:100%;margin-bottom:14px}
 .weiter{border-left:5px solid var(--salbei);padding:4px 0 4px 14px;margin-top:16px}
 .btn{display:block;text-align:center;text-decoration:none;border-radius:16px;background:var(--terra-dk);color:#fff;font-size:16px;font-weight:600;padding:15px 18px;margin-top:14px}
 .btn:hover{background:#8f4c2e}
-.foot{text-align:center;font-size:12px;color:var(--muted);margin-top:22px}
-.foot a{color:inherit}
-@media (max-width:420px){h1{font-size:29px}.card{padding:20px 18px}}
+.leise summary{padding:14px 16px;min-height:0}
+.leise .titel{font-size:16px}
+.foot{text-align:center;font-size:13px;color:var(--muted);margin-top:22px}
+.foot a{color:inherit;display:inline-block;padding:8px 10px}
+@media (max-width:420px){h1{font-size:29px}.kopf img{height:300px}}
 </style></head>
 <body><main>
 <div class="werbung">Werbung</div>
 
 <header class="kopf">
-  <div class="mark">🌿 steffimartin.pur</div>
-  <h1>5 Minuten für mich</h1>
-  <div class="unter">7 Tage, jeden Tag fünf Minuten nur für dich</div>
+  <img src="5min/kopf.jpg" alt="Steffi auf der Gartenschaukel mit ihrem Notizbuch">
+  <div>
+    <div class="mark">🌿 steffimartin.pur</div>
+    <h1>5 Minuten für mich</h1>
+    <div class="unter">7 Tage, jeden Tag fünf Minuten nur für dich</div>
+  </div>
 </header>
-
-<section class="card">
-  <p>Zehn freie Minuten, und du räumst die Spülmaschine ein, hängst noch eben fix Wäsche auf. Alles, was mal eben so noch erledigt werden könnte. Abends im Bett rattert dir der Kopf: Termine, Brotdosen für die Kinder, welche Klamotten brauchen wir gerade, habe ich alle Termine, was liegt auf der Arbeit an, an was muss ich noch alles denken. Klar, von außen sieht es so aus, als kriegst du alles hin. Und in dir drin hast du das Gefühl, es bleibt irgendwie keine Minute für dich, und du hetzt nur noch dem Hamsterrad hinterher.</p>
-  <p>Ich habe gemerkt: Es wird nicht von allein ruhiger, weil ja nie alles erledigt ist. Der Kopf bleibt voll, und an manchen Tagen wird man halt einfach schneller laut, deutlich schneller, als einem lieb ist. Und du ärgerst dich danach über dich selbst, weil es nicht das ist, was du willst, und auch nicht, was du für deine Kinder willst.</p>
-  <p>Ich glaube, dass ganz viele von uns wirklich warten, bis alles erledigt ist. Aber das ist es ja nie. Früher habe ich mir auch immer erst eine Pause genommen, wenn ich der Meinung war, dass wirklich alles fertig ist. Oder wenn mein Körper einfach gesagt hat: So, jetzt reicht's. Wir speichern uns Beiträge über Selbstfürsorge oder fangen irgendein großes Programm an, das wir dann drei Tage durchziehen. Und am Ende bleibt es doch wieder liegen.</p>
-</section>
-
-<section class="card">
-  <h2>Was mir hilft</h2>
-  <p>Ich habe für mich festgestellt, dass mir kleine Momente helfen, die wirklich in meinen Alltag passen. Bei mir sind es ein paar Minuten am Morgen, bevor die Kinder wach werden, oder auch, wenn die Kinder schon wach sind, die ich mir dann einfach nehme: durchatmen, mein Dankbarkeitstagebuch schreiben, einen Fokus für den Tag festlegen. Das ist morgens jetzt quasi meine Notbremse, um nicht direkt mit Motzen, Meckern und schlechter Laune zu starten. Und wenn abends der Kopf rattert, weil noch so viele Sachen da sind, die ich vielleicht nicht geschafft habe oder die dazugekommen sind, dann schreibe ich einfach alles auf. Damit es aus dem Kopf raus ist, aber eben nicht weg.</p>
-  <p>Du stehst morgens einfach auf und nimmst dir ganz bewusst ein paar Minuten nur für dich, wirklich nur ein paar Minuten, um entspannt und fokussiert statt vollkommen gestresst in den Tag zu starten. Das ist für mich ein absoluter Gamechanger.</p>
-</section>
 
 <section class="card sogehts">
   <h2>So geht's</h2>
@@ -69,85 +69,125 @@ audio{width:100%;margin-top:14px}
   </ol>
 </section>
 
-<nav class="uebersicht" aria-label="Tage">
-  <a href="#tag1">Tag 1</a><a href="#tag2">Tag 2</a><a href="#tag3">Tag 3</a><a href="#tag4">Tag 4</a><a href="#tag5">Tag 5</a><a href="#tag6">Tag 6</a><a href="#tag7">Tag 7</a>
-</nav>
+<div class="zwischen">DEINE 7 TAGE · ZUM ÖFFNEN ANTIPPEN</div>
 
-<section class="card tag" id="tag1">
-  <span class="tagnr">TAG 1</span>
-  <h2>Ankommen und hinschauen</h2>
-  <p>Heute schaust du einfach mal hin, wo deine freien Minuten eigentlich hingehen.</p>
-  <div class="aufgabe"><b>DEINE FÜNF MINUTEN</b><p>Schreib heute Abend auf, was du alles „noch eben mal fix“ gemacht hast. Die Wäsche, die Spülmaschine, die Nachricht an die Kita, alles darf drauf.</p></div>
-  <p class="vonmir"><b>Von mir:</b> Ich bin quasi schon morgens aufgestanden mit gefühlt 1000 To-Dos.</p>
-  <div class="audio" data-audio=""><i></i>Hier kommt bald mein Audio zu Tag 1.</div>
-</section>
-
-<section class="card tag" id="tag2">
-  <span class="tagnr">TAG 2</span>
-  <h2>Kopf leeren</h2>
-  <p>Abends im Bett rattert dir der Kopf? Dann kommt heute mal alles da raus.</p>
-  <div class="aufgabe"><b>DEINE FÜNF MINUTEN</b><p>Nimm dir heute Abend einen Zettel oder dein Handy und schreib alles auf, was noch in deinem Kopf kreist: Termine, Brotdosen, was noch ansteht. Du schreibst es einfach runter, ganz ohne Ordnung.</p></div>
-  <p class="vonmir"><b>Von mir:</b> Wenn ich merke, dass der Kopf rattert, dann habe ich mir angewöhnt, das einfach alles aufzuschreiben, damit es eben aus dem Kopf raus, aber nicht vergessen ist. Das hilft tatsächlich sehr gut.</p>
-  <div class="audio" data-audio=""><i></i>Hier kommt bald mein Audio zu Tag 2.</div>
-</section>
-
-<section class="card tag" id="tag3">
-  <span class="tagnr">TAG 3</span>
-  <h2>Raum schaffen</h2>
-  <p>Heute wird's vielleicht ein bisschen ungewohnt.</p>
-  <div class="aufgabe"><b>DEINE FÜNF MINUTEN</b><p>Such dir heute ein einziges „noch eben mal fix“ aus und lass es bewusst und ohne schlechtes Gewissen liegen. Die fünf Minuten, die dabei frei werden, gehören dir. Setz dich hin und trink in Ruhe deinen Kaffee, oder schau einfach mal aus dem Fenster.</p></div>
-  <p class="vonmir"><b>Von mir:</b> Ich bin ein Workaholic gewesen und ja, manchmal auch immer noch. Und wenn ich Sachen einfach mal liegen gelassen habe, hatte ich immer sehr schnell ein schlechtes Gewissen.</p>
-  <div class="audio" data-audio=""><i></i>Hier kommt bald mein Audio zu Tag 3.</div>
-</section>
-
-<section class="card tag" id="tag4">
-  <span class="tagnr">TAG 4</span>
-  <h2>Dein 5-Minuten-Moment</h2>
-  <p>Heute nimmst du dir ein paar Minuten, bevor der Tag dich hat.</p>
-  <div class="aufgabe"><b>DEINE FÜNF MINUTEN</b><p>Nimm dir morgens, bevor alles losgeht, ein paar Minuten. Atme einmal tief durch, schreib drei Dinge auf, wofür du heute dankbar bist, und leg dir einen Fokus für den Tag fest.</p></div>
-  <p class="vonmir"><b>Von mir:</b> Ich habe für mich das als Ritual festgestellt, ich nehme mir das morgens einfach, bevor die Kinder auch wach werden, um gut in den Tag zu starten, weil es einfach meine Laune auch besser macht und mir direkt etwas Positives am Morgen vor Augen führt.</p>
-  <div class="audio" data-audio=""><i></i>Hier kommt bald mein Audio zu Tag 4.</div>
-</section>
-
-<section class="card tag" id="tag5">
-  <span class="tagnr">TAG 5</span>
-  <h2>Dein Pflegemoment</h2>
-  <p>Heute geht es um einen kleinen Moment nur für dich.</p>
-  <div class="aufgabe"><b>DEINE FÜNF MINUTEN</b><p>Nimm dir heute fünf Minuten nur für deine Pflege, mit dem, was du eh schon da hast. Trag dir in Ruhe deine Gesichtscreme auf, oder creme dir mal ganz bewusst die Hände oder die Füße ein. Und schau dabei mal nicht aufs Handy.</p></div>
-  <p class="vonmir"><b>Von mir:</b> Freie Minuten verbringe ich tatsächlich auch einfach mal mit meiner Pflegeroutine, um mir mal was zu gönnen, anstatt wieder irgendwelche Aufgaben zu erledigen.</p>
-  <div class="audio" data-audio=""><i></i>Hier kommt bald mein Audio zu Tag 5.</div>
-</section>
-
-<section class="card tag" id="tag6">
-  <span class="tagnr">TAG 6</span>
-  <h2>Dich entlasten</h2>
-  <p>Heute darf etwas einfacher werden.</p>
-  <div class="aufgabe"><b>DEINE FÜNF MINUTEN</b><p>Überleg dir eine Sache von deiner Liste, die heute nicht perfekt sein muss. Vielleicht reicht ein schnelles Abendessen, oder die Wäsche wartet bis morgen. Und wenn es jemanden gibt, der dir etwas abnehmen kann, frag ruhig mal nach.</p></div>
-  <p class="vonmir"><b>Von mir:</b> Wenn mein Akku leer ist, kann ich auch niemand anderem mehr helfen. Deshalb ist es wichtig, auf mich zu gucken.</p>
-  <div class="audio" data-audio=""><i></i>Hier kommt bald mein Audio zu Tag 6.</div>
-</section>
-
-<section class="card tag" id="tag7">
-  <span class="tagnr">TAG 7</span>
-  <h2>Dein Ritual festigen</h2>
-  <p>Das waren jetzt sieben kleine Momente. Welcher hat dir am besten getan?</p>
-  <div class="aufgabe"><b>DEINE FÜNF MINUTEN</b><p>Schau zurück auf die Woche und such dir deinen Lieblingsmoment aus. Den planst du dir für die nächste Woche fest ein, so wie er in deinen Alltag passt.</p></div>
-  <p class="vonmir"><b>Von mir:</b> Ich mache echt ungern Pausen. Das fällt mir immer noch schwer. Aber ich habe für mich festgestellt, dass Pausen wirklich wichtig sind, um auf Dauer durchzuhalten.</p>
-  <div class="audio" data-audio=""><i></i>Hier kommt bald mein Audio zu Tag 7.</div>
-  <div class="weiter">
-    <h2>Und wie geht's weiter?</h2>
-    <p>Wenn du dranbleiben magst: In „Ciao Funktionieren“ gehen wir das vier Wochen lang zusammen an, mit einer WhatsApp-Gruppe und einem Impuls von mir pro Woche. Die erste Runde ist eine Pilotrunde, weil ich das zum ersten Mal mache. Schreib mir einfach bei Instagram, dann erzähl ich dir mehr.</p>
+<details class="tag" id="tag1" name="tage">
+  <summary><img class="mini" src="5min/tag1.jpg" alt=""><span><span class="tagnr">TAG 1</span><span class="titel">Ankommen und hinschauen</span></span></summary>
+  <div class="text">
+    <img class="bild" loading="lazy" src="5min/tag1.jpg" alt="Wäscheständer auf der Veranda">
+    <audio controls preload="none" data-audio=""></audio>
+    <p>Heute schaust du einfach mal hin, wo deine freien Minuten eigentlich hingehen.</p>
+    <div class="aufgabe"><b>DEINE FÜNF MINUTEN</b><p>Schreib heute Abend auf, was du alles „noch eben mal fix“ gemacht hast. Die Wäsche, die Spülmaschine, die Nachricht an die Kita, alles darf drauf.</p></div>
+    <p class="vonmir"><b>Von mir:</b> Ich bin quasi schon morgens aufgestanden mit gefühlt 1000 To-Dos.</p>
   </div>
-  <a class="btn" href="https://ig.me/m/steffimartin.pur">Schreib mir bei Instagram</a>
-</section>
+</details>
 
-<div class="foot"><a href="https://steffimartinpur.github.io/impressum.html">Impressum</a> &nbsp;&nbsp; < href="https://steffimartinpur.github.io/datenschutz.html">Datenschutz</a></div>
+<details class="tag" id="tag2" name="tage">
+  <summary><img class="mini" src="5min/tag2.jpg" alt=""><span><span class="tagnr">TAG 2</span><span class="titel">Kopf leeren</span></span></summary>
+  <div class="text">
+    <img class="bild" loading="lazy" src="5min/tag2.jpg" alt="Steffi schreibt auf der Gartenschaukel in ihr Notizbuch">
+    <audio controls preload="none" data-audio=""></audio>
+    <p>Abends im Bett rattert dir der Kopf? Dann kommt heute mal alles da raus.</p>
+    <div class="aufgabe"><b>DEINE FÜNF MINUTEN</b><p>Nimm dir heute Abend einen Zettel oder dein Handy und schreib alles auf, was noch in deinem Kopf kreist: Termine, Brotdosen, was noch ansteht. Du schreibst es einfach runter, ganz ohne Ordnung.</p></div>
+    <p class="vonmir"><b>Von mir:</b> Wenn ich merke, dass der Kopf rattert, dann habe ich mir angewöhnt, das einfach alles aufzuschreiben, damit es eben aus dem Kopf raus, aber nicht vergessen ist. Das hilft tatsächlich sehr gut.</p>
+  </div>
+</details>
+
+<details class="tag" id="tag3" name="tage">
+  <summary><img class="mini" src="5min/tag3.jpg" alt=""><span><span class="tagnr">TAG 3</span><span class="titel">Raum schaffen</span></span></summary>
+  <div class="text">
+    <img class="bild" loading="lazy" src="5min/tag3.jpg" alt="Tasse Kakao mit einem Smiley aus Kakaopulver">
+    <audio controls preload="none" data-audio=""></audio>
+    <p>Heute wird's vielleicht ein bisschen ungewohnt.</p>
+    <div class="aufgabe"><b>DEINE FÜNF MINUTEN</b><p>Such dir heute ein einziges „noch eben mal fix“ aus und lass es bewusst und ohne schlechtes Gewissen liegen. Die fünf Minuten, die dabei frei werden, gehören dir. Setz dich hin und trink in Ruhe deinen Kaffee, oder schau einfach mal aus dem Fenster.</p></div>
+    <p class="vonmir"><b>Von mir:</b> Ich bin ein Workaholic gewesen und ja, manchmal auch immer noch. Und wenn ich Sachen einfach mal liegen gelassen habe, hatte ich immer sehr schnell ein schlechtes Gewissen.</p>
+  </div>
+</details>
+
+<details class="tag" id="tag4" name="tage">
+  <summary><img class="mini" src="5min/tag4.jpg" alt=""><span><span class="tagnr">TAG 4</span><span class="titel">Dein 5-Minuten-Moment</span></span></summary>
+  <div class="text">
+    <img class="bild" loading="lazy" src="5min/tag4.jpg" alt="Sonnenaufgang über dem Garten">
+    <audio controls preload="none" data-audio=""></audio>
+    <p>Heute nimmst du dir ein paar Minuten, bevor der Tag dich hat.</p>
+    <div class="aufgabe"><b>DEINE FÜNF MINUTEN</b><p>Nimm dir morgens, bevor alles losgeht, ein paar Minuten. Atme einmal tief durch, schreib drei Dinge auf, wofür du heute dankbar bist, und leg dir einen Fokus für den Tag fest.</p></div>
+    <p class="vonmir"><b>Von mir:</b> Ich habe für mich das als Ritual festgestellt, ich nehme mir das morgens einfach, bevor die Kinder auch wach werden, um gut in den Tag zu starten, weil es einfach meine Laune auch besser macht und mir direkt etwas Positives am Morgen vor Augen führt.</p>
+  </div>
+</details>
+
+<details class="tag" id="tag5" name="tage">
+  <summary><img class="mini" src="5min/tag5.jpg" alt=""><span><span class="tagnr">TAG 5</span><span class="titel">Dein Pflegemoment</span></span></summary>
+  <div class="text">
+    <img class="bild" loading="lazy" src="5min/tag5.jpg" alt="Steffi cremt sich vor dem Spiegel das Gesicht ein">
+    <audio controls preload="none" data-audio=""></audio>
+    <p>Heute geht es um einen kleinen Moment nur für dich.</p>
+    <div class="aufgabe"><b>DEINE FÜNF MINUTEN</b><p>Nimm dir heute fünf Minuten nur für deine Pflege, mit dem, was du eh schon da hast. Trag dir in Ruhe deine Gesichtscreme auf, oder creme dir mal ganz bewusst die Hände oder die Füße ein. Und schau dabei mal nicht aufs Handy.</p></div>
+    <p class="vonmir"><b>Von mir:</b> Freie Minuten verbringe ich tatsächlich auch einfach mal mit meiner Pflegeroutine, um mir mal was zu gönnen, anstatt wieder irgendwelche Aufgaben zu erledigen.</p>
+  </div>
+</details>
+
+<details class="tag" id="tag6" name="tage">
+  <summary><img class="mini" src="5min/tag6.jpg" alt=""><span><span class="tagnr">TAG 6</span><span class="titel">Dich entlasten</span></span></summary>
+  <div class="text">
+    <img class="bild" loading="lazy" src="5min/tag6.jpg" alt="Steffi sitzt lachend auf einer Holzbank">
+    <audio controls preload="none" data-audio=""></audio>
+    <p>Heute darf etwas einfacher werden.</p>
+    <div class="aufgabe"><b>DEINE FÜNF MINUTEN</b><p>Überleg dir eine Sache von deiner Liste, die heute nicht perfekt sein muss. Vielleicht reicht ein schnelles Abendessen, oder die Wäsche wartet bis morgen. Und wenn es jemanden gibt, der dir etwas abnehmen kann, frag ruhig mal nach.</p></div>
+    <p class="vonmir"><b>Von mir:</b> Wenn mein Akku leer ist, kann ich auch niemand anderem mehr helfen. Deshalb ist es wichtig, auf mich zu gucken.</p>
+  </div>
+</details>
+
+<details class="tag" id="tag7" name="tage">
+  <summary><img class="mini" src="5min/tag7.jpg" alt=""><span><span class="tagnr">TAG 7</span><span class="titel">Dein Ritual festigen</span></span></summary>
+  <div class="text">
+    <img class="bild" loading="lazy" src="5min/tag7.jpg" alt="Steffi mit Hund auf dem Feldweg">
+    <audio controls preload="none" data-audio=""></audio>
+    <p>Das waren jetzt sieben kleine Momente. Welcher hat dir am besten getan?</p>
+    <div class="aufgabe"><b>DEINE FÜNF MINUTEN</b><p>Schau zurück auf die Woche und such dir deinen Lieblingsmoment aus. Den planst du dir für die nächste Woche fest ein, so wie er in deinen Alltag passt.</p></div>
+    <p class="vonmir"><b>Von mir:</b> Ich mache echt ungern Pausen. Das fällt mir immer noch schwer. Aber ich habe für mich festgestellt, dass Pausen wirklich wichtig sind, um auf Dauer durchzuhalten.</p>
+    <div class="weiter">
+      <h2>Und wie geht's weiter?</h2>
+      <p>Wenn du dranbleiben magst: In „Ciao Funktionieren“ gehen wir das vier Wochen lang zusammen an, mit einer WhatsApp-Gruppe und einem Impuls von mir pro Woche. Die erste Runde ist eine Pilotrunde, weil ich das zum ersten Mal mache. Schreib mir einfach bei Instagram, dann erzähl ich dir mehr.</p>
+    </div>
+    <a class="btn" href="https://ig.me/m/steffimartin.pur">Schreib mir bei Instagram</a>
+  </div>
+</details>
+
+<div class="zwischen">WARUM ICH DAS MACHE</div>
+
+<details class="leise" name="tage">
+  <summary><span class="titel">Kennst du das?</span></summary>
+  <div class="text">
+    <p>Zehn freie Minuten, und du räumst die Spülmaschine ein, hängst noch eben fix Wäsche auf. Alles, was mal eben so noch erledigt werden könnte. Abends im Bett rattert dir der Kopf: Termine, Brotdosen für die Kinder, welche Klamotten brauchen wir gerade, habe ich alle Termine, was liegt auf der Arbeit an, an was muss ich noch alles denken. Klar, von außen sieht es so aus, als kriegst du alles hin. Und in dir drin hast du das Gefühl, es bleibt irgendwie keine Minute für dich, und du hetzt nur noch dem Hamsterrad hinterher.</p>
+    <p>Ich habe gemerkt: Es wird nicht von allein ruhiger, weil ja nie alles erledigt ist. Der Kopf bleibt voll, und an manchen Tagen wird man halt einfach schneller laut, deutlich schneller, als einem lieb ist. Und du ärgerst dich danach über dich selbst, weil es nicht das ist, was du willst, und auch nicht, was du für deine Kinder willst.</p>
+    <p>Ich glaube, dass ganz viele von uns wirklich warten, bis alles erledigt ist. Aber das ist es ja nie. Früher habe ich mir auch immer erst eine Pause genommen, wenn ich der Meinung war, dass wirklich alles fertig ist. Oder wenn mein Körper einfach gesagt hat: So, jetzt reicht's. Wir speichern uns Beiträge über Selbstfürsorge oder fangen irgendein großes Programm an, das wir dann drei Tage durchziehen. Und am Ende bleibt es doch wieder liegen.</p>
+  </div>
+</details>
+
+<details class="leise" name="tage">
+  <summary><span class="titel">Was mir hilft</span></summary>
+  <div class="text">
+    <p>Ich habe für mich festgestellt, dass mir kleine Momente helfen, die wirklich in meinen Alltag passen. Bei mir sind es ein paar Minuten am Morgen, bevor die Kinder wach werden, oder auch, wenn die Kinder schon wach sind, die ich mir dann einfach nehme: durchatmen, mein Dankbarkeitstagebuch schreiben, einen Fokus für den Tag festlegen. Das ist morgens jetzt quasi meine Notbremse, um nicht direkt mit Motzen, Meckern und schlechter Laune zu starten. Und wenn abends der Kopf rattert, weil noch so viele Sachen da sind, die ich vielleicht nicht geschafft habe oder die dazugekommen sind, dann schreibe ich einfach alles auf. Damit es aus dem Kopf raus ist, aber eben nicht weg.</p>
+    <p>Du stehst morgens einfach auf und nimmst dir ganz bewusst ein paar Minuten nur für dich, wirklich nur ein paar Minuten, um entspannt und fokussiert statt vollkommen gestresst in den Tag zu starten. Das ist für mich ein absoluter Gamechanger.</p>
+  </div>
+</details>
+
+<div class="foot"><a href="https://steffimartinpur.github.io/impressum.html">Impressum</a> <a href="https://steffimartinpur.github.io/datenschutz.html">Datenschutz</a></div>
 </main>
 <script>
-// Audio-Link eintragen: data-audio="https://…/tag1.mp3" -> Player erscheint statt Platzhalter
-document.querySelectorAll('.audio[data-audio]').forEach(function(d){
-  var src=d.getAttribute('data-audio');
-  if(src){var a=document.createElement('audio');a.controls=true;a.preload='none';a.src=src;d.replaceWith(a);}
+// Audio-Link eintragen: data-audio="https://…/tag1.mp3" -> Player erscheint oben im Tag, ohne Link bleibt er unsichtbar
+document.querySelectorAll('audio[data-audio]').forEach(function(a){
+  var src=a.getAttribute('data-audio');
+  if(src){a.src=src;}else{a.remove();}
+});
+// Immer nur ein Abschnitt offen, und der geöffnete rutscht nach oben ins Bild
+var alle=document.querySelectorAll('details');
+alle.forEach(function(d){
+  d.addEventListener('toggle',function(){
+    if(!d.open)return;
+    alle.forEach(function(x){if(x!==d)x.open=false;});
+    d.scrollIntoView({behavior:'smooth',block:'start'});
+  });
 });
 </script>
 </body></html>
